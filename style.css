@@ -569,6 +569,7 @@ html {
 	.card-text {
 		font-size: 15em;
 	}
+
 	.img-mv {
 		display: none;
 	}
@@ -607,7 +608,7 @@ html {
 		display: flex;
 	}
 	.move-Input {
-		margin-top: -15em;
+		margin-top: -13em;
 		height: 25%;
 	}
 
