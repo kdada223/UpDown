@@ -1,353 +1,353 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 @font-face {
-  font-family: 'RoundedFixedsys';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff')
-    format('woff');
-  font-weight: normal;
-  font-display: swap;
+	font-family: 'RoundedFixedsys';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff')
+		format('woff');
+	font-weight: normal;
+	font-display: swap;
 }
 body,
 html {
-  font-family: 'RoundedFixedsys';
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow: hidden;
+	font-family: 'RoundedFixedsys';
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .nav-control {
-  display: flex;
-  justify-content: space-between;
-  background-image: linear-gradient(to right, #f5f5f5, #30475e, #121212);
-  align-items: center;
-  /* border-bottom: 1px solid black; */
-  position: relative;
-  height: 8vh;
+	display: flex;
+	justify-content: space-between;
+	background-image: linear-gradient(to right, #f5f5f5, #30475e, #121212);
+	align-items: center;
+	/* border-bottom: 1px solid black; */
+	position: relative;
+	height: 8vh;
 }
 .logo-control {
-  padding-left: 1em;
+	padding-left: 1em;
 }
 .game-title {
-  flex: 1;
-  text-align: center;
-  font-size: 2em;
-  font-weight: bold;
-  margin: auto;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #f5f5f5;
+	flex: 1;
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+	margin: auto;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #f5f5f5;
 }
 .nav-menu-control {
-  display: flex;
-  padding: 1em 2em;
-  justify-content: space-around;
-  gap: 1.2em;
-  font-size: 1.2em;
-  color: #f5f5f5;
+	display: flex;
+	padding: 1em 2em;
+	justify-content: space-around;
+	gap: 1.2em;
+	font-size: 1.2em;
+	color: #f5f5f5;
 }
 .nav-menu-control a {
-  text-decoration: none;
-  color: #f5f5f5;
-  z-index: 1;
-  text-underline-offset: 0.25em;
+	text-decoration: none;
+	color: #f5f5f5;
+	z-index: 1;
+	text-underline-offset: 0.25em;
 }
 .nav-menu-control a:hover {
-  text-decoration: 3px underline #f05454;
-  z-index: 2;
+	text-decoration: 3px underline #f05454;
+	z-index: 2;
 }
 .background {
-  background-color: #f5f5f5;
-  width: 100%;
-  height: 94vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+	background-color: #f5f5f5;
+	width: 100%;
+	height: 94vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
 }
 /* 내가 만들어보는 오디오 컨트롤러 */
 .audio-ctr {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 .mouseInOut {
-  width: 10%;
-  height: 4%;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  left: 5.5%;
-  top: 10%;
+	width: 10%;
+	height: 4%;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: 5.5%;
+	top: 10%;
 }
 #playPauseBtn {
-  border: none;
-  cursor: pointer;
-  color: #f05454;
-  background-color: transparent;
-  font-size: 1.5em;
+	border: none;
+	cursor: pointer;
+	color: #f05454;
+	background-color: transparent;
+	font-size: 1.5em;
 }
 #playPauseBtn:focus {
-  border: none;
-  outline: none;
+	border: none;
+	outline: none;
 }
 /* 볼륨 바 */
 #volum-ctr input {
-  -webkit-appearance: none; /* Chrome, Safari, Opera */
-  -moz-appearance: none; /* Firefox */
-  appearance: none; /* standard */
-  width: 100%;
-  height: 10px;
-  background-color: #f05454;
-  border-radius: 25px;
+	-webkit-appearance: none; /* Chrome, Safari, Opera */
+	-moz-appearance: none; /* Firefox */
+	appearance: none; /* standard */
+	width: 100%;
+	height: 10px;
+	background-color: #f05454;
+	border-radius: 25px;
 }
 #volum-ctr {
-  opacity: 0;
-  transition: 0.3s ease-in-out;
+	opacity: 0;
+	transition: 0.3s ease-in-out;
 }
 #volum-ctr input:focus {
-  border: none;
-  outline: none;
+	border: none;
+	outline: none;
 }
 #volum-ctr input::-webkit-slider-runnable-track {
-  width: 100%;
-  cursor: pointer;
-  height: 8px;
-  background-color: #f05454;
-  border-radius: 25px;
+	width: 100%;
+	cursor: pointer;
+	height: 8px;
+	background-color: #f05454;
+	border-radius: 25px;
 }
 /* 동그란 핸들 */
 #volum-ctr input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  background-color: #121212;
-  border-radius: 50%;
-  margin-top: -4px;
-  cursor: pointer;
-  margin-left: 1px;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 16px;
+	height: 16px;
+	background-color: #121212;
+	border-radius: 50%;
+	margin-top: -4px;
+	cursor: pointer;
+	margin-left: 1px;
 }
 
 /* 이 밑은 다른 css */
 .section-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 }
 .main-box {
-  width: 40vw;
-  height: 80vh;
-  background-color: #121212;
-  background-position: center;
-  border: 8px solid #f05454;
-  border-radius: 20px;
-  color: #f5f5f5;
-  position: relative;
+	width: 40vw;
+	height: 80vh;
+	background-color: #121212;
+	background-position: center;
+	border: 8px solid #f05454;
+	border-radius: 20px;
+	color: #f5f5f5;
+	position: relative;
 }
 
 .user-num {
-  position: absolute;
-  top: 4.5em;
-  right: 1em;
-  font-size: 1.2em;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+	position: absolute;
+	top: 4.5em;
+	right: 1em;
+	font-size: 1.2em;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
 }
 .save-user-num {
-  display: flex;
-  flex-direction: column;
-  text-align: end;
+	display: flex;
+	flex-direction: column;
+	text-align: end;
 }
 .h1-font {
-  font-size: 2em;
-  text-align: center;
-  padding-top: 0.5em;
+	font-size: 2em;
+	text-align: center;
+	padding-top: 0.5em;
 }
 .heart-move {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 1em;
-  padding-left: 1em;
+	display: flex;
+	justify-content: space-between;
+	padding-right: 1em;
+	padding-left: 1em;
 }
 .flexdrt {
-  display: flex;
-  flex-direction: row-reverse;
+	display: flex;
+	flex-direction: row-reverse;
 }
 .heart-img {
-  width: 32px;
-  height: 32px;
-  margin-left: 2px;
+	width: 32px;
+	height: 32px;
+	margin-left: 2px;
 }
 .empty-heart {
-  display: none;
+	display: none;
 }
 #answer {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-  margin-top: 1em;
+	font-size: 2.5em;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
 }
 #number-Input {
-  font-family: 'RoundedFixedsys';
-  width: 40%;
-  height: 30%;
-  margin-bottom: 1em;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 1.5em;
-  border: none;
-  outline: none;
+	font-family: 'RoundedFixedsys';
+	width: 40%;
+	height: 30%;
+	margin-bottom: 1em;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 1.5em;
+	border: none;
+	outline: none;
 }
 #number-Input::placeholder {
-  text-align: center;
-  font-family: 'RoundedFixedsys';
+	text-align: center;
+	font-family: 'RoundedFixedsys';
 }
 .card {
-  background-color: #f5f5f5;
-  width: 40%;
-  height: 60%;
-  border: 10px solid #f5f5f5;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	background-color: #f5f5f5;
+	width: 40%;
+	height: 60%;
+	border: 10px solid #f5f5f5;
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .rotate-card {
-  perspective: 1000px;
-  transform-style: preserve-3d; /* 3D 변형 유지를 위해 필요 */
-  /* 애니메이션 속성 */
-  animation: rotate3D 1.5s 1 linear; /* 5초마다 반복, 선형 속도 */
-  transform-origin: 50% 50%; /* 회전 중심 설정 */
+	perspective: 1000px;
+	transform-style: preserve-3d; /* 3D 변형 유지를 위해 필요 */
+	/* 애니메이션 속성 */
+	animation: rotate3D 1.5s 1 linear; /* 5초마다 반복, 선형 속도 */
+	transform-origin: 50% 50%; /* 회전 중심 설정 */
 }
 @keyframes rotate3D {
-  from {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }
-  to {
-    /* X, Y, Z축으로 회전하여 3D 회전 효과 구현 */
-    transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
-  }
+	from {
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	to {
+		/* X, Y, Z축으로 회전하여 3D 회전 효과 구현 */
+		transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+	}
 }
 
 .card-move {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90%;
-  width: 100%;
-  margin-top: -6em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90%;
+	width: 100%;
+	margin-top: -6em;
 }
 .card-text {
-  color: #121212;
-  font-size: 12em;
-  text-align: center;
+	color: #121212;
+	font-size: 12em;
+	text-align: center;
 }
 
 .move-Input {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: -8em;
-  height: 30%;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: -9em;
+	height: 30%;
+	width: 100%;
 }
 
 .menu-1 {
-  display: flex;
-  flex-direction: column;
-  z-index: 0;
-  position: absolute;
-  top: 20%;
-  left: 6%;
-  justify-content: space-between;
-  height: 50%;
-  font-size: 1.5em;
+	display: flex;
+	flex-direction: column;
+	z-index: 0;
+	position: absolute;
+	top: 20%;
+	left: 6%;
+	justify-content: space-between;
+	height: 50%;
+	font-size: 1.5em;
 }
 .menu-1 a {
-  text-decoration: none;
-  color: #2b3e50;
+	text-decoration: none;
+	color: #2b3e50;
 }
 @keyframes rainbow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 .menu-1 a:hover {
-  background-image: linear-gradient(
-    to right,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    purple
-  );
-  background-size: 400% 400%;
-  background-repeat: repeat;
-  -webkit-background-clip: text; /* 텍스트에만 배경 클립 */
-  background-clip: text;
-  -webkit-text-fill-color: transparent; /* 텍스트 외부 색상 투명 처리 */
-  animation: rainbow 2s linear infinite;
+	background-image: linear-gradient(
+		to right,
+		red,
+		orange,
+		yellow,
+		green,
+		blue,
+		indigo,
+		purple
+	);
+	background-size: 400% 400%;
+	background-repeat: repeat;
+	-webkit-background-clip: text; /* 텍스트에만 배경 클립 */
+	background-clip: text;
+	-webkit-text-fill-color: transparent; /* 텍스트 외부 색상 투명 처리 */
+	animation: rainbow 2s linear infinite;
 }
 
 .menu-2 {
-  display: flex;
-  position: absolute;
-  right: 0;
-  top: 15%;
+	display: flex;
+	position: absolute;
+	right: 0;
+	top: 15%;
 }
 .img-mv {
-  width: 350px;
-  height: auto;
+	width: 350px;
+	height: auto;
 }
 
 .answer-button {
-  margin-bottom: 1em;
-  width: 4em;
-  height: 3em;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-  background-color: #f5f5f5;
-  font-family: 'RoundedFixedsys';
+	margin-bottom: 1em;
+	width: 4em;
+	height: 3em;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2em;
+	background-color: #f5f5f5;
+	font-family: 'RoundedFixedsys';
 }
 .reset-button {
-  width: 4em;
-  height: 3em;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-  background-color: #f5f5f5;
-  font-family: 'RoundedFixedsys';
+	width: 4em;
+	height: 3em;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2em;
+	background-color: #f5f5f5;
+	font-family: 'RoundedFixedsys';
 }
 .btn {
-  cursor: pointer;
+	cursor: pointer;
 }
 .btn:hover {
-  background-color: #f05454;
-  transition: transform 0.1s ease-in-out;
-  transform: scale(1.2);
-  /* color: #f5f5f5; */
+	background-color: #f05454;
+	transition: transform 0.1s ease-in-out;
+	transform: scale(1.2);
+	/* color: #f5f5f5; */
 }
 .btn:disabled,
 .btn:disabled:hover {
-  background-color: #121212; /* 원하는 비활성화 색상 */
-  color: #121212;
-  cursor: default;
-  transform: none;
+	background-color: #121212; /* 원하는 비활성화 색상 */
+	color: #121212;
+	cursor: default;
+	transform: none;
 }
 
 /* /* //반응형 웹 사이트 만들기... 미디어 쿼리로 만들고 가장 많이 바꾸는 것들이
@@ -356,269 +356,269 @@ html {
 /* ==================== 미디어쿼리: 노트북, 태블릿, 모바일 ==================== */
 /* Extra small devices (휴대폰, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .main-box {
-    width: 100%;
-    height: 100%;
-    border-width: 8px;
-    border-radius: 0;
-    font-size: 0.7em;
-  }
-  .card-text {
-    font-size: 5em;
-  }
-  .jun {
-    font-size: 0.8em;
-  }
-  .card {
-    height: 50%;
-    width: 70%;
-    margin-top: -10em;
-  }
-  .img-mv {
-    display: none;
-  }
-  .answer-button,
-  .reset-button {
-    width: 40%;
-    font-size: 1.1em;
-    padding: 0;
-  }
-  .menu-1,
-  .nav-menu-control {
-    display: none !important;
-  }
-  .mouseInOut {
-    position: static;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    width: 100%;
-    justify-content: center;
-    position: absolute;
-    z-index: 2;
-    top: 3.5em;
-    left: 0;
-  }
-  #number-Input {
-    height: 2em;
-  }
-  #number-Input::placeholder {
-    font-size: 0.6em;
-    text-align: center;
-  }
-  .heart-move {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 0.5em;
-    gap: 0.5em;
-    padding: 0.5em 0;
-    font-size: 1.5em;
-    display: flex;
-  }
-  .move-Input {
-    margin-top: -20em;
-    height: 25%;
-  }
-  .user-num {
-    margin-top: 1.2em;
-  }
-  #volum-ctr input::-webkit-slider-thumb {
-    background-color: #f5f5f5;
-  }
-  body,
-  html {
-    overflow: auto;
-  }
+	.main-box {
+		width: 100%;
+		height: 100%;
+		border-width: 8px;
+		border-radius: 0;
+		font-size: 0.7em;
+	}
+	.card-text {
+		font-size: 5em;
+	}
+	.jun {
+		font-size: 0.8em;
+	}
+	.card {
+		height: 50%;
+		width: 70%;
+		margin-top: -10em;
+	}
+	.img-mv {
+		display: none;
+	}
+	.answer-button,
+	.reset-button {
+		width: 40%;
+		font-size: 1.1em;
+		padding: 0;
+	}
+	.menu-1,
+	.nav-menu-control {
+		display: none !important;
+	}
+	.mouseInOut {
+		position: static;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		width: 100%;
+		justify-content: center;
+		position: absolute;
+		z-index: 2;
+		top: 3.5em;
+		left: 0;
+	}
+	#number-Input {
+		height: 2em;
+	}
+	#number-Input::placeholder {
+		font-size: 0.6em;
+		text-align: center;
+	}
+	.heart-move {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 0.5em;
+		gap: 0.5em;
+		padding: 0.5em 0;
+		font-size: 1.5em;
+		display: flex;
+	}
+	.move-Input {
+		margin-top: -20em;
+		height: 25%;
+	}
+	.user-num {
+		margin-top: 1.2em;
+	}
+	#volum-ctr input::-webkit-slider-thumb {
+		background-color: #f5f5f5;
+	}
+	body,
+	html {
+		overflow: auto;
+	}
 }
 
 /* Small devices (큰 휴대폰 태블릿까지?, 600px ~ 768px) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-  .main-box {
-    width: 100%;
-    height: 100%;
-    border-width: 8px;
-    border-radius: 0;
-  }
-  .card-text {
-    font-size: 15em;
-  }
-  .img-mv {
-    display: none;
-  }
-  .answer-button,
-  .reset-button {
-    width: 40%;
-    font-size: 1.1em;
-    padding: 0;
-  }
-  .menu-1,
-  .nav-menu-control {
-    display: none !important;
-  }
-  .mouseInOut {
-    position: static;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    width: 100%;
-    justify-content: center;
-    position: absolute;
-    z-index: 2;
-    top: 3.5em;
-    left: 0;
-  }
-  #number-Input {
-    height: 2em;
-  }
-  .heart-move {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 0.5em;
-    gap: 0.5em;
-    padding: 0.5em 0;
-    font-size: 1.5em;
-    display: flex;
-  }
-  .move-Input {
-    margin-top: -12em;
-    height: 25%;
-  }
-  .user-num {
-    margin-top: 1.2em;
-  }
-  #volum-ctr input::-webkit-slider-thumb {
-    background-color: #f5f5f5;
-  }
-  body,
-  html {
-    overflow: auto;
-  }
+	.main-box {
+		width: 100%;
+		height: 100%;
+		border-width: 8px;
+		border-radius: 0;
+	}
+	.card-text {
+		font-size: 15em;
+	}
+	.img-mv {
+		display: none;
+	}
+	.answer-button,
+	.reset-button {
+		width: 40%;
+		font-size: 1.1em;
+		padding: 0;
+	}
+	.menu-1,
+	.nav-menu-control {
+		display: none !important;
+	}
+	.mouseInOut {
+		position: static;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		width: 100%;
+		justify-content: center;
+		position: absolute;
+		z-index: 2;
+		top: 3.5em;
+		left: 0;
+	}
+	#number-Input {
+		height: 2em;
+	}
+	.heart-move {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 0.5em;
+		gap: 0.5em;
+		padding: 0.5em 0;
+		font-size: 1.5em;
+		display: flex;
+	}
+	.move-Input {
+		margin-top: -12em;
+		height: 25%;
+	}
+	.user-num {
+		margin-top: 1.2em;
+	}
+	#volum-ctr input::-webkit-slider-thumb {
+		background-color: #f5f5f5;
+	}
+	body,
+	html {
+		overflow: auto;
+	}
 }
 
 /* Medium devices (이건 태블릿사이즈, 769px ~ 991px) */
 @media only screen and (min-width: 769px) and (max-width: 991px) {
-  .main-box {
-    width: 100%;
-    height: 100%;
-    border-width: 8px;
-    border-radius: 0;
-  }
-  .card-text {
-    font-size: 15em;
-  }
-  .img-mv {
-    display: none;
-  }
-  .answer-button,
-  .reset-button {
-    width: 40%;
-    font-size: 1.1em;
-    padding: 0;
-  }
-  .menu-1,
-  .nav-menu-control {
-    display: none !important;
-  }
-  .mouseInOut {
-    position: static;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    width: 100%;
-    justify-content: center;
-    position: absolute;
-    z-index: 2;
-    top: 3.5em;
-    left: 0;
-  }
-  #number-Input {
-    height: 2em;
-  }
-  .heart-move {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 0.5em;
-    gap: 0.5em;
-    padding: 0.5em 0;
-    font-size: 1.5em;
-    display: flex;
-  }
-  .move-Input {
-    margin-top: -14em;
-    height: 25%;
-  }
+	.main-box {
+		width: 100%;
+		height: 100%;
+		border-width: 8px;
+		border-radius: 0;
+	}
+	.card-text {
+		font-size: 15em;
+	}
+	.img-mv {
+		display: none;
+	}
+	.answer-button,
+	.reset-button {
+		width: 40%;
+		font-size: 1.1em;
+		padding: 0;
+	}
+	.menu-1,
+	.nav-menu-control {
+		display: none !important;
+	}
+	.mouseInOut {
+		position: static;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		width: 100%;
+		justify-content: center;
+		position: absolute;
+		z-index: 2;
+		top: 3.5em;
+		left: 0;
+	}
+	#number-Input {
+		height: 2em;
+	}
+	.heart-move {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 0.5em;
+		gap: 0.5em;
+		padding: 0.5em 0;
+		font-size: 1.5em;
+		display: flex;
+	}
+	.move-Input {
+		margin-top: -12em;
+		height: 25%;
+	}
 
-  .user-num {
-    margin-top: 1.2em;
-  }
-  #volum-ctr input::-webkit-slider-thumb {
-    background-color: #f5f5f5;
-  }
-  body,
-  html {
-    overflow: auto;
-  }
+	.user-num {
+		margin-top: 1.2em;
+	}
+	#volum-ctr input::-webkit-slider-thumb {
+		background-color: #f5f5f5;
+	}
+	body,
+	html {
+		overflow: auto;
+	}
 }
 @media only screen and (min-width: 992px) and (max-width: 1050px) {
-  .main-box {
-    width: 100%;
-    height: 100%;
-    border-width: 8px;
-    border-radius: 0;
-  }
-  .card-text {
-    font-size: 15em;
-  }
-  .img-mv {
-    display: none;
-  }
-  .answer-button,
-  .reset-button {
-    width: 40%;
-    font-size: 1.1em;
-    padding: 0;
-  }
-  .menu-1,
-  .nav-menu-control {
-    display: none !important;
-  }
-  .mouseInOut {
-    position: static;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    width: 100%;
-    justify-content: center;
-    position: absolute;
-    z-index: 2;
-    top: 3.5em;
-    left: 0;
-  }
-  #number-Input {
-    height: 2em;
-  }
-  .heart-move {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 0.5em;
-    gap: 0.5em;
-    padding: 0.5em 0;
-    font-size: 1.5em;
-    display: flex;
-  }
-  .move-Input {
-    margin-top: -15em;
-    height: 25%;
-  }
+	.main-box {
+		width: 100%;
+		height: 100%;
+		border-width: 8px;
+		border-radius: 0;
+	}
+	.card-text {
+		font-size: 15em;
+	}
+	.img-mv {
+		display: none;
+	}
+	.answer-button,
+	.reset-button {
+		width: 40%;
+		font-size: 1.1em;
+		padding: 0;
+	}
+	.menu-1,
+	.nav-menu-control {
+		display: none !important;
+	}
+	.mouseInOut {
+		position: static;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		width: 100%;
+		justify-content: center;
+		position: absolute;
+		z-index: 2;
+		top: 3.5em;
+		left: 0;
+	}
+	#number-Input {
+		height: 2em;
+	}
+	.heart-move {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 0.5em;
+		gap: 0.5em;
+		padding: 0.5em 0;
+		font-size: 1.5em;
+		display: flex;
+	}
+	.move-Input {
+		margin-top: -15em;
+		height: 25%;
+	}
 
-  .user-num {
-    margin-top: 1.2em;
-  }
-  #volum-ctr input::-webkit-slider-thumb {
-    background-color: #f5f5f5;
-  }
-  body,
-  html {
-    overflow: auto;
-  }
+	.user-num {
+		margin-top: 1.2em;
+	}
+	#volum-ctr input::-webkit-slider-thumb {
+		background-color: #f5f5f5;
+	}
+	body,
+	html {
+		overflow: auto;
+	}
 }
