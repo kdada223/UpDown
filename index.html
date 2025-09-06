@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAMEMOA</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../Assets/IMG/로고(폰트X).png" />
+  </head>
+
+  <body>
+    <nav>
+      <!-- 드롭다운메뉴 구현해야함 -->
+      <div class="nav-control">
+        <div class="logo-control">
+          <a href="#">
+            <img src="../Assets/IMG/로고(폰트O).png" alt="..." width="70px" />
+          </a>
+        </div>
+        <div class="game-title">
+          <div>게임모아</div>
+        </div>
+        <div class="nav-menu-control">
+          <a href="#">Game</a>
+          <div>|</div>
+          <a href="#">Rule</a>
+          <div>|</div>
+          <a href="#">Support & Bug</a>
+          <div>|</div>
+          <a href="#">Ranking</a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="background">
+        <section class="po-1">
+          <div class="mouseInOut">
+            <audio
+              src="../Assets/MS/Untitled.mp3"
+              class="music-control"
+              loop
+            ></audio>
+            <div class="audio-ctr">
+              <button id="playPauseBtn">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <div id="volum-ctr">
+                <input
+                  type="range"
+                  id="volum-slide"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value="1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-1">
+            <a href="#">RPG</a><a href="#">MMORPG</a><a href="#">AOS</a
+            ><a href="#">FPS</a><a href="#">ACTION</a><a href="#">RACING</a
+            ><a href="#">Indie</a><a href="#">PUZZLE</a>
+          </div>
+        </section>
+
+        <section class="section-box">
+          <div class="main-box">
+            <h1 class="h1-font">HIGH & LOW</h1>
+            <div class="heart-move">
+              <div class="jun">제작자:강준영</div>
+              <div class="flexdrt">
+                <img
+                  src="../Assets/IMG/full-heart.png"
+                  alt="..."
+                  class="heart-img"
+                  id="heart1"
+                />
+                <img
+                  src="../Assets/IMG/full-heart.png"
+                  alt="..."
+                  class="heart-img"
+                  id="heart2"
+                />
+                <img
+                  src="../Assets/IMG/full-heart.png"
+                  alt="..."
+                  class="heart-img"
+                  id="heart3"
+                />
+                <img
+                  src="../Assets/IMG/full-heart.png"
+                  alt="..."
+                  class="heart-img"
+                  id="heart4"
+                />
+                <img
+                  src="../Assets/IMG/full-heart.png"
+                  alt="..."
+                  class="heart-img"
+                  id="heart5"
+                />
+                <img
+                  src="../Assets/IMG/empty-heart.png"
+                  alt="..."
+                  class="heart-img empty-heart"
+                  id="empty1"
+                />
+                <img
+                  src="../Assets/IMG/empty-heart.png"
+                  alt="..."
+                  class="heart-img empty-heart"
+                  id="empty2"
+                />
+                <img
+                  src="../Assets/IMG/empty-heart.png"
+                  alt="..."
+                  class="heart-img empty-heart"
+                  id="empty3"
+                />
+                <img
+                  src="../Assets/IMG/empty-heart.png"
+                  alt="..."
+                  class="heart-img empty-heart"
+                  id="empty4"
+                />
+                <img
+                  src="../Assets/IMG/empty-heart.png"
+                  alt="..."
+                  class="heart-img empty-heart"
+                  id="empty5"
+                />
+              </div>
+            </div>
+            <div class="user-num">
+              <div>입력한 값</div>
+              <div class="save-user-num"></div>
+            </div>
+            <div class="card-move">
+              <div class="card">
+                <div class="card-text">?</div>
+              </div>
+            </div>
+            <div class="move-Input">
+              <div id="answer">Up & Down</div>
+              <input
+                type="Number"
+                id="number-Input"
+                placeholder="값을 입력하세요"
+                onKeyUp="enterPush(event)"
+              />
+              <button class="answer-button btn">정답</button>
+              <button class="reset-button btn">리셋</button>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="menu-2">
+            <a
+              href="https://www.fashion4you.co.kr/shop/shopbrand.html?type=Y&xcode=128&dclid=CJj8wuPzr48DFZryFgUd0WUtQw&gad_source=7&gclid=EAIaIQobChMIu6v64fOvjwMVwrmsAh0hyg65EAEYASAAEgIEcvD_BwE"
+              target="_blank"
+            >
+              <img
+                src="https://s0.2mdn.net/simgad/16575350074587738610"
+                alt="..."
+                class="img-mv"
+              />
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/009860e372.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
